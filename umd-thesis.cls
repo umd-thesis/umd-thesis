@@ -63,7 +63,7 @@
 \maxtocdepth{subsubsection}
 \setsecnumdepth{subsubsection}
 \renewcommand*{\printtoctitle}[1]{%
-  \vspace*{\droptitle}\centering\large\umd@contentsname}
+  \vspace*{\droptitle}\centering\large#1}
 \renewcommand*{\cftchaptername}{Chapter\space}
 \renewcommand*{\cftappendixname}{Appendix\space}
 \renewcommand*{\cftchapterdotsep}{\cftdotsep}
@@ -307,6 +307,10 @@
 % Set up some stuff at document begin
 
 \AtBeginDocument{%
+  % Table of contents name
+  \@ifpackageloaded{babel}
+    {\setlocalecaption{\bbl@loaded}{contents}{\umd@contentsname}}
+    {\renewcommand{\contentsname}{\umd@contentsname}}
   % Bibliography configuration
   \@ifpackageloaded{biblatex}
     % biblatex
