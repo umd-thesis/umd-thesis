@@ -336,7 +336,10 @@
   \checkandfixthelayout
   % hyperref
   \@ifpackageloaded{hyperref}
-    {\hypersetup{pdfborder={0 0 0}}}
+    {\hypersetup{
+      pdfborder={0 0 0},
+      pdftitle={\thetitle},
+      pdfauthor={\theauthor}}}
     {\relax}}
 
 \endinput
