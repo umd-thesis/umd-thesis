@@ -283,7 +283,7 @@
 
 \newenvironment{abbreviations}{%
   \renewcommand{\umd@frontmattername}{\umd@abbreviationsname}
-  \preface%
+  \preface\SingleSpacing%
 }{\endpreface}
 
 % Main matter
