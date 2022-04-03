@@ -293,13 +293,13 @@
 
 \chapterstyle{article}
 \renewcommand{\printchapternum}{%
-  \vspace*{\droptitle}\chapnumfont Chapter \thechapter:\quad}
+  \vspace*{\droptitle}\chapnumfont Chapter \thechapter\quad}
 
 % Appendices
 
 \newcommand*{\umd@appendixconfig}{%
   \renewcommand{\printchapternum}{%
-    \vspace*{\droptitle}\chapnumfont Appendix \thechapter:\quad}}
+    \vspace*{\droptitle}\chapnumfont Appendix \thechapter\quad}}
 
 \AtBeginEnvironment{appendix}{\umd@appendixconfig}
 \AtBeginEnvironment{appendices}{\umd@appendixconfig}
